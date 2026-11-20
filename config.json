@@ -1,0 +1,14 @@
+{
+ "company_name": "Solvane Energy",
+ "company_profile": "Solvane Energy sells and installs home batteries (the SV-10, LFP chemistry) and solar-plus-storage systems for households in the US and EU. Leadership cares about: competitors (Tesla Powerwall, Enphase, sonnen, BYD, LG and others), battery and solar prices, incentives and regulation (tax credits, net metering, grid rules), utility programs and virtual power plants, EV and home electrification trends, battery technology and safety, and supply chain.",
+ "categories": ["Competitors", "Policy & incentives", "Market & prices", "Technology", "Grid & utilities", "Other"],
+ "window_hours": 36,
+ "model": "gpt-5.4-mini",
+ "sources": [
+  {"name": "Electrek", "type": "rss", "url": "https://electrek.co/feed/"},
+  {"name": "Canary Media", "type": "rss", "url": "https://www.canarymedia.com/rss.rss"},
+  {"name": "Ars Technica", "type": "rss", "url": "https://feeds.arstechnica.com/arstechnica/index"},
+  {"name": "The Verge", "type": "rss", "url": "https://www.theverge.com/rss/index.xml"},
+  {"name": "Hacker News", "type": "hn"}
+ ]
+}

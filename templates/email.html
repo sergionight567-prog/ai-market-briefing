@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>{{ company }} briefing</title></head>
+<body style="margin:0;background:#EEF1F5;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;color:#18212E">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EEF1F5;padding:28px 12px"><tr><td align="center">
+<table role="presentation" width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%;background:#ffffff;border-radius:18px;overflow:hidden">
+  <tr><td style="background:#101826;padding:28px 32px">
+    <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F3A64A;font-weight:700">Daily briefing</div>
+    <div style="font-size:24px;font-weight:700;color:#fff;margin-top:6px">{{ company }} · what matters today</div>
+    <div style="font-size:13px;color:#9AA6B8;margin-top:6px">{{ date }} · {{ items|length }} stories selected by relevance</div>
+  </td></tr>
+  {% for it in items %}
+  <tr><td style="padding:22px 32px 0">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#B5652B">{{ it.category }} · {{ it.source }}
+      <span style="float:right;color:#18212E;background:#FFF3E3;border-radius:99px;padding:2px 9px;letter-spacing:0">{{ it.relevance }}/10</span></div>
+    <a href="{{ it.url }}" style="display:block;font-size:17px;font-weight:700;color:#18212E;text-decoration:none;margin:6px 0 6px;line-height:1.35">{{ it.title }}</a>
+    <div style="font-size:14px;line-height:1.6;color:#3C4757">{{ it.summary }}</div>
+    {% if it.why %}<div style="font-size:13.5px;line-height:1.55;color:#18212E;background:#F5F7FA;border-left:3px solid #F3A64A;padding:9px 12px;margin-top:10px;border-radius:0 8px 8px 0"><b>Why it matters:</b> {{ it.why }}</div>{% endif %}
+    <div style="border-bottom:1px solid #E7EBF0;padding-top:22px"></div>
+  </td></tr>
+  {% endfor %}
+  <tr><td style="padding:22px 32px 28px;font-size:12px;color:#8A95A6;line-height:1.6">Generated automatically from public news feeds. Summaries are AI-written from headlines and excerpts; open the link for the full story.<br>Run {{ run }}</td></tr>
+</table></td></tr></table>
+</body></html>
